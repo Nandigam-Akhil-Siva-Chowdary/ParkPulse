@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkPulse - Smart Parking Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="radar-animation"></div>
+                <h1>ParkPulse</h1>
+            </div>
+            <p class="subtitle">Smart Parking Management System</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">🚗</div>
+                <div class="stat-info">
+                    <h3>Cars Today</h3>
+                    <p id="totalCars" class="stat-value">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🅿️</div>
+                <div class="stat-info">
+                    <h3>Free Slots</h3>
+                    <p id="freeSlots" class="stat-value">4</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <h3>Occupancy Rate</h3>
+                    <p id="occupancyRate" class="stat-value">0%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parking-map">
+            <h2>Parking Slots</h2>
+            <div class="slots-container" id="slotsContainer">
+            </div>
+        </div>
+
+        <div class="system-status">
+            <h3>System Status</h3>
+            <div class="status-indicators">
+                <div class="indicator">
+                    <span class="led green"></span>
+                    <span>Entry Gate: Active</span>
+                </div>
+                <div class="indicator">
+                    <span class="led green"></span>
+                    <span>Exit Gate: Active</span>
+                </div>
+                <div class="indicator">
+                    <span class="led rotating"></span>
+                    <span>Radar Scanning</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

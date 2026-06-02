@@ -1,0 +1,66 @@
+========================================
+    ParkPulse Wiring Connections
+========================================
+
+Raspberry Pi GPIO Pin Mapping (BCM Mode):
+
+COMPONENT          | GPIO PIN | PHYSICAL PIN
+------------------|----------|-------------
+ENTRY ULTRASONIC   |          |
+  - Trig          | 17       | 11
+  - Echo          | 27       | 13
+------------------|----------|-------------
+EXIT ULTRASONIC    |          |
+  - Trig          | 22       | 15
+  - Echo          | 23       | 16
+------------------|----------|-------------
+RADAR ULTRASONIC   |          |
+  - Trig          | 24       | 18
+  - Echo          | 25       | 22
+------------------|----------|-------------
+SERVO MOTORS      |          |
+  - Entry Gate     | 18       | 12
+  - Exit Gate      | 19       | 35
+  - Radar Rotation | 21       | 40
+------------------|----------|-------------
+POWER             |          |
+  - 5V            | -        | 2,4
+  - GND           | -        | 6,9,14,20,25,30,34,39
+
+========================================
+Detailed Wiring Instructions:
+========================================
+
+1. ULTRASONIC SENSORS (HC-SR04):
+   - VCC  -> 5V (Pin 2 or 4)
+   - GND  -> GND (Any ground pin)
+   - Trig -> Assigned GPIO pin
+   - Echo -> Assigned GPIO pin (use voltage divider: 5V to 3.3V)
+
+   IMPORTANT: HC-SR04 Echo outputs 5V, use voltage divider:
+   1kΩ resistor from Echo to GPIO, 2kΩ from GPIO to GND
+
+2. SERVO MOTORS (SG90):
+   - Red (VCC)  -> 5V (External power recommended for multiple servos)
+   - Brown (GND) -> GND
+   - Orange (Signal) -> Assigned GPIO pin
+
+   Note: For 3 servos, use external 5V power supply
+   Connect grounds together (RPi GND and external supply GND)
+
+3. POWER RECOMMENDATIONS:
+   - Single servo: RPi 5V pin is sufficient
+   - Multiple servos: Use external 5V/2A power supply
+   - Connect all grounds together
+
+4. PHYSICAL LAYOUT:
+   - Entry sensor: Mount at parking entrance (knee height)
+   - Exit sensor: Mount at parking exit
+   - Radar sensor: Attach to servo, mount on ceiling (1-2m height)
+   - Entry servo: Connect to gate mechanism at entrance
+   - Exit servo: Connect to gate mechanism at exit
+
+5. TESTING:
+   - Test each sensor individually first
+   - Ensure servos move freely without obstruction
+   - Calibrate ultrasonic thresholds in code if needed
