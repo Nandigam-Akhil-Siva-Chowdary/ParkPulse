@@ -81,7 +81,7 @@ ParkPulse/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ParkPulse.git
+git clone https://github.com/Nandigam-Akhil-Siva-Chowdary/ParkPulse.git
 cd ParkPulse
 ```
 
