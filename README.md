@@ -126,47 +126,6 @@ http://[RASPBERRY_PI_IP]:5000
 
 ---
 
-## 🎮 How It Works
-
-<div align="center">
-  <svg width="700" height="180" xmlns="http://www.w3.org/2000/svg">
-    <rect width="700" height="180" fill="#1e1e2f" rx="15"/>
-    <text x="350" y="30" fill="#fff" text-anchor="middle" font-size="14" font-weight="bold">System Architecture Flow</text>
-    <!-- Entry -->
-    <rect x="20" y="70" width="120" height="50" rx="10" fill="#2c3e66" stroke="#00ffcc" stroke-width="2"/>
-    <text x="80" y="95" fill="#fff" text-anchor="middle" font-size="12">Entry Sensor</text>
-    <text x="80" y="110" fill="#ccc" text-anchor="middle" font-size="10">HC-SR04</text>
-    <line x1="140" y1="95" x2="180" y2="95" stroke="#00ffcc" stroke-width="2" marker-end="url(#arrow)"/>
-
-    <!-- Raspberry Pi -->
-    <rect x="190" y="50" width="140" height="80" rx="10" fill="#3c2e4e" stroke="#ffcc00" stroke-width="2"/>
-    <text x="260" y="80" fill="#fff" text-anchor="middle" font-size="13" font-weight="bold">Raspberry Pi</text>
-    <text x="260" y="100" fill="#ccc" text-anchor="middle" font-size="10">GPIO + Threads</text>
-    <text x="260" y="115" fill="#ccc" text-anchor="middle" font-size="10">Flask Server</text>
-    <line x1="330" y1="90" x2="370" y2="90" stroke="#00ffcc" stroke-width="2"/>
-
-    <!-- Servos -->
-    <rect x="380" y="40" width="130" height="40" rx="8" fill="#664422" stroke="#ff9933" stroke-width="2"/>
-    <text x="445" y="63" fill="#fff" text-anchor="middle" font-size="11">Entry/Exit Servos</text>
-    <line x1="380" y1="60" x2="330" y2="80" stroke="#ff9933" stroke-width="1.5" stroke-dasharray="4"/>
-
-    <rect x="380" y="100" width="130" height="40" rx="8" fill="#664422" stroke="#ff9933" stroke-width="2"/>
-    <text x="445" y="123" fill="#fff" text-anchor="middle" font-size="11">Radar Servo</text>
-
-    <line x1="510" y1="120" x2="550" y2="120" stroke="#00ffcc" stroke-width="2"/>
-    <!-- Dashboard -->
-    <rect x="560" y="70" width="120" height="50" rx="10" fill="#226622" stroke="#00ffcc" stroke-width="2"/>
-    <text x="620" y="95" fill="#fff" text-anchor="middle" font-size="12">Web Dashboard</text>
-    <text x="620" y="110" fill="#ccc" text-anchor="middle" font-size="10">Browser</text>
-
-    <defs>
-      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-        <path d="M0,0 L0,6 L9,3 z" fill="#00ffcc"/>
-      </marker>
-    </defs>
-  </svg>
-</div>
-
 ### 🚗 Entry Process
 1. Car approaches entry sensor (<20cm)
 2. System checks for free parking slots
@@ -193,44 +152,6 @@ http://[RASPBERRY_PI_IP]:5000
 - Occupancy rate calculation
 - Live system status indicators
 - Auto-refresh every 2 seconds
-
----
-
-## 🎨 Visual Animations
-
-The dashboard includes several **animated SVG elements**:
-
-<div align="center">
-  <svg width="500" height="100" xmlns="http://www.w3.org/2000/svg">
-    <rect x="10" y="10" width="100" height="80" rx="10" fill="#1e1e2f" stroke="#00ffcc" stroke-width="1.5"/>
-    <circle cx="60" cy="50" r="15" fill="none" stroke="#00ffcc" stroke-width="2">
-      <animateTransform attributeName="transform" type="rotate" from="0 60 50" to="360 60 50" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <line x1="60" y1="50" x2="75" y2="35" stroke="#00ffcc" stroke-width="2">
-      <animateTransform attributeName="transform" type="rotate" from="0 60 50" to="360 60 50" dur="2s" repeatCount="indefinite"/>
-    </line>
-    <text x="60" y="95" fill="#ccc" text-anchor="middle" font-size="10">Radar Scan</text>
-
-    <rect x="130" y="10" width="100" height="80" rx="10" fill="#1e1e2f" stroke="#ff3366" stroke-width="1.5"/>
-    <circle cx="180" cy="50" r="10" fill="#ff3366">
-      <animate attributeName="r" values="10;15;10" dur="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
-    </circle>
-    <text x="180" y="95" fill="#ccc" text-anchor="middle" font-size="10">Pulse Effect</text>
-
-    <rect x="250" y="10" width="100" height="80" rx="10" fill="#1e1e2f" stroke="#ffcc00" stroke-width="1.5"/>
-    <rect x="280" y="30" width="40" height="40" rx="5" fill="#ffcc00">
-      <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="0.5s" repeatCount="indefinite"/>
-    </rect>
-    <text x="300" y="95" fill="#ccc" text-anchor="middle" font-size="10">Hover Lift</text>
-
-    <rect x="370" y="10" width="100" height="80" rx="10" fill="#1e1e2f" stroke="#33ff99" stroke-width="1.5"/>
-    <circle cx="420" cy="50" r="8" fill="#33ff99">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="420" y="95" fill="#ccc" text-anchor="middle" font-size="10">LED Blink</text>
-  </svg>
-</div>
 
 ---
 
@@ -349,8 +270,8 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 ## 📞 Support
 
 For issues or questions:
-- **GitHub Issues:** [Create issue](https://github.com/yourusername/ParkPulse/issues)
-- **Email:** support@parkpulse.com
+- **GitHub Issues:** [Create issue](https://github.com/Nandigam-Akhil-Siva-Chowdary/ParkPulse/issues)
+- **Email:** contact@akhilsiva.xyz
 
 ---
 
